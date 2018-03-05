@@ -1,0 +1,23 @@
+function format(argumentsInput) {
+    for (i = 1; i < arguments.length; i++) {
+        argumentsInput = argumentsInput.replace("{" + (i - 1) + "}", arguments[i]);
+    }
+    return argumentsInput;
+ }
+
+ function formatHelper1() {
+   var s1 = document.getElementById('inString1').value;
+   var a1 = document.getElementById('arg1').value;
+   var a2 = document.getElementById('arg2').value;
+
+ alert(format(s1,a1,a2));
+}
+
+
+   function formatHelper2() {
+     var s2 = document.getElementById('inString2').value;
+     var a3 = document.getElementById('arg3').value;
+     var a4 = document.getElementById('arg4').value;
+
+   alert(format(s2,a3,a4));
+ }
